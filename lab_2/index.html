@@ -5,52 +5,47 @@
     <meta charset="utf-8" />
     <style>
       img {
-        max-width: 100%;
-        height: auto;
-        /* very basic css to make sure my browser works right */
+        max-width: 250px;
+        /* basic css to make the images display a bit better */
       }
     </style>
   </head>
   <body>
-    <h1>Some Basic HTML Tags</h1>
+    <h1>Favorite Card</h1>
     <p>
-      &lt;p&gt; tags are used for generic text in paragraphs.
-      <br />
-      &lt;ul&gt; tags are used create bulleted lists:
+      I'm a pretty big fan of the trading card game Magic: the Gathering.
+      Among the over 20,000 cards that exist within it, I have a particular favorite card.
+      A basic understanding of the mechanics is required ot understand my favorite card, however.
+      Players start with a life total, an arbitrary number representing that player's health.
+      The most basic goal of the game is to attack with creatures, dealing damage to your opponent, until that player's life total reaches 0 or less.
     </p>
-
-    <ul>
-      <li>
-        <p>
-          Inside of an unordered list,
-          &lt;li&gt; tags are used to represent individual items.
-          Those items can have other tags within them.
-        </p>
-      </li>
-
-      <li>
-        <h3>
-          &lt;h3&gt; is the third size of heading,
-          and is useful for nested layers of titles,
-          among other things.
-        </h3>
-      </li>
-
-      <li>
-        <h6>
-          &lt;h6&gt; is the smallest of the headings,
-          and by default is actually smaller than the p tag.
-        </h6>
-      </li>
-
-      <li>
-        <a href="https://xkcd.com/455/">
-          Links to other pages can be created with the &lt;a&gt; tag.
-        </a>
-      </li>
-    </ul>
-    
-    <h2>Images can be created with the &lt;img&gt; tag:</h2>
-    <img src="imgs/code.png" alt="Image containing this page's code."/>
+    <h2>Elspeth, Sun's Champion</h2>
+    <h3>Legendary Planeswalker - Elspeth</h3>
+    <p>
+      Elspeth herself is a planeswalker, a card type representing an ally in your battle.
+      She has three abilities, which can aid you.
+      <ul>
+        <li>
+          Creating three soldier creature tokens.
+          Given that your goal is to attack your opponent,
+          gaining an additional three creatures every turn is incredibly useful.
+        </li>
+        <li>
+          Mass removing relatively large creatures.
+          The creature tokens Elspeth brings with her have fairly small base stats,
+          so they tend not to fair well against creatures with greater stats.
+          For this reason, Elspeth also comes with the ability to destroy all creatures that are larger than an specific threshold.
+        </li>
+        <li>
+          Finally, her last 'ultimate' ability allows her tokens to gain a huge advantage,
+          which can immediately swing the game in your favor, if not win the game outright.
+        </li>
+      </ul>
+    </p>
+    <a href="https://scryfall.com/card/ddo/1/elspeth-suns-champion">
+      <img src="imgs/elspeth.png" alt="Elspeth" title="Elspeth, Sun's Champion" />
+    </a>
+    <img src="imgs/token.png" alt="Elspeth's token" title="Elspeth's token" />
+    <img src="imgs/emblem.png" alt="Elspeth's emblem" title="Elspeth's emblem" />
   </body>
 </html>
