@@ -1,0 +1,120 @@
+@import '//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'; /* external font */
+
+:root { /* took me a minute to settle on a basic color palette, used this to make changes tidy */
+    --main-color: hotpink;
+    --accent-color: grey;
+    --link-color: white;
+    --container-bg: black;
+    --accent-bg: #333;
+    --over-img-color: white;
+}
+
+body {
+    font-family: Hack, "Courier New", monospace;
+    background-color: var(--accent-bg);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--container-bg);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+main {
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* this is the only reliable way I know to center an image tag */
+}
+
+header h1, main h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+main h2 {
+    font-size: 40px;
+}
+  
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    background-color: var(--accent-bg);
+    padding: 10px;
+}
+
+main img {
+    border-radius: 20px;
+    width: 75%;
+}
+
+footer {
+    background-color: var(--accent-bg);
+    padding: 40px 0; /* assuming padding was meant by 40px top and bottom 0 left and right */
+    text-align: center;
+    color: var(--accent-color);
+}
+
+/* beyond this point here lies my stuff */
+
+a {
+    transition: 300ms ease; /* why not? */
+}
+
+a, a:visited {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: inherit;
+}
+
+a:active {
+    color: var(--accent-color);
+}
+
+main img {
+    height: auto; /* album art can get pretty stretched */
+}
+
+#container {
+    border-radius: 10px;
+}
+
+.other-page-header {
+    background-image: url('../imgs/mothership.png');
+    height: 128px;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;;
+}
+
+h3 {
+    color: var(--over-img-color);
+    font-size: 20px;
+}
