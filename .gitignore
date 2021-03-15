@@ -1,2 +1,4 @@
 /index.html
 /*.sh
+/midterm/list.json
+/midterm/data/ignore-*

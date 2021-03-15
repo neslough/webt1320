@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>How to Build an EDH Cube | Part 2: Structure</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <header>
+        <h1>How to Build an EDH Cube</h1>
+        <h2>Part 2: Structure </h2>
+      </header>
+      <nav>
+        <!-- maybe I shouldn't be using block a tags... idk -->
+        <a href="." class="nav-link">
+          <!-- there is definitely a better solution than hardcoding which is selected, but I'm lazy -->
+          Part 1
+        </a>
+        <a href="page-2.html" class="nav-link selected">
+          Part 2
+        </a>
+        <a href="page-3.html" class="nav-link">
+          Part 3
+        </a>
+        <a href="page-4.html" class="nav-link">
+          Part 4
+        </a>
+        <a href="page-5.html" class="nav-link">
+          Part 5
+        </a>
+      </nav>
+      <main>
+        <h3>Why 864 cards?</h3>
+        <p>
+          Cube Draft is a format intended to be played with eight players.
+          Getting into some of the details of the format, each player gets a certain number of 'packs' (normally 3) of a set amount of cards (normally 15).
+          So, 8 players * 3 packs/player * 15 cards/pack = 360.
+          This EDH cube, on the other hand, will have six packs of 18.
+          So, 8 players * 6 packs/player * 18 cards/pack = 864.
+          ...So why 6 packs of 18?
+          The choice is somewhat arbitrary, but allows for enough card selection to build a well-tuned EDH deck.
+          Really, the number 864 was chosen becaused it offered enough cards to build a cube, while still being factorable into packs (after taking into account the extra 48 cards).
+        </p>
+        <h3>Sections</h3>
+        <p>
+          The idea behind building a cube is dividing the total card count into sections, each of which contains cards pertaining to a particular strategy.
+          This is done so that when it comes time for the cards to be drafted, each player can choose cards that work well together, in order to optimize their decks.
+          However, especially in EDH Cubes, there exist a number of cards that are generically good in virtually every deck that can play them.
+          For this reason, a fair number of card slots are devoted to cards that work well in any deck.
+          In addition, EDH requires the use of a special card called the commander, and as there is high variance in what cards each player will have access to, it's important that there are enough commanders in the Cube that each player can reasonably have the chance to get an optimal commander. 
+        </p>
+        <h3>The Sections in Question</h3>
+        <p>
+          The finalized sections I ended up going with are:
+        </p>
+        <ul>
+          <li>50 cards for each of 10 strategies (totaling 500 cards)</li>
+          <li>229 cards that aren't playable in every deck, but can be useful (Fixing lands, Mono-colored value, Dual-colored value)</li>
+          <li>93 cards that can be played in any deck (Artifact ramp, Generic value)</li>
+          <li>42 additonal commanders (other sections also contain cards that may be used as a commander)</li>
+        </ul>
+      </main>
+      <footer>
+        <div class="pages">
+          <a href=".">
+            Previous Page &lArr;
+          </a>
+          <a href="page-3.html" class="next">
+            Next Page &rArr;
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

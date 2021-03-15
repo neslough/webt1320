@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>How to Build an EDH Cube | Part 5: The Final List</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <header>
+        <h1>How to Build an EDH Cube</h1>
+        <h2>Part 5: The Final List</h2>
+      </header>
+      <nav>
+        <!-- maybe I shouldn't be using block a tags... idk -->
+        <a href="." class="nav-link">
+          <!-- there is definitely a better solution than hardcoding which is selected, but I'm lazy -->
+          Part 1
+        </a>
+        <a href="page-2.html" class="nav-link">
+          Part 2
+        </a>
+        <a href="page-3.html" class="nav-link">
+          Part 3
+        </a>
+        <a href="page-4.html" class="nav-link">
+          Part 4
+        </a>
+        <a href="page-5.html" class="nav-link selected">
+          Part 5
+        </a>
+      </nav>
+      <main>
+        <h3>Completed Cube</h3>
+        <p>
+          At last, here are all of the cards in the completed cube.
+        </p>
+      </main>
+      <div id="card-list">
+        Loading...
+      </div>
+      <aside id="hover-image"></aside>
+      <footer>
+        <div class="pages">
+          <a href="page-4.html">
+            &lArr; Previous Page
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.onload = () => {
+        //there really wasn't any reason to use an external script file
+  
+        const clearImage = () => document.querySelector('#hover-image').innerHTML = '';
+        const genShowCard = (imageURL) => {
+          return function showCard() {
+            let img = new Image();
+            //all of these files are hosted on a cdn, and are likely cached, so I don't worry about spamming the content host
+            img.onload = function onLoad() {
+              clearImage(); //done here rather than earlier to reduce race conditions
+              document.querySelector('#hover-image').appendChild(img);
+            }
+            img.src = imageURL;
+          };
+        };
+  
+        //rather than type out the html for 864 cards, I fetch the list from an external data file,
+        //then programatically generate the html for them
+        fetch('./data/XEC.json').then(_=>_.json()).then(data => {
+          const elementArray = data.map(card => {
+            let ret = document.createElement('div');
+            let a = document.createElement('a');
+            a.setAttribute('href', card.uri);
+            a.setAttribute('target', '_blank');
+            a.innerHTML = card.name;
+            a.addEventListener('mouseover', genShowCard(card.image));
+            ret.appendChild(a);
+            //ret.addEventListener('mouseout', clearImage);
+            //only really serves to add a race condition
+            return ret;
+          });
+          
+          const cardList = document.querySelector('#card-list');
+          cardList.innerHTML = "";
+          for(let i in elementArray)
+            cardList.appendChild(elementArray[i]);
+        }).catch(_ => document.querySelector('#card-list').innerHTML = "Error loading card list: " + _);
+      };
+    </script>
+  </body>
+</html>
