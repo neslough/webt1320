@@ -1,0 +1,71 @@
+:root {
+  --body-bg-color: #555;
+  --main-bg-color: #511;
+  --bg-accent-color: #111;
+  --fg-color: #ccc;
+  --accent-color: hotpink;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--fg-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+img.card {
+  border-radius: 5%;
+}
+
+a, a:visited, a:active, a:hover {
+  color: var(--accent-color);
+  text-decoration-color: var(--accent-color);
+}
+
+/* mobile ? */
+
+h1 {
+  font-size: 16pt;
+}
+
+header, footer {
+  padding: 20px 0;
+}
+
+header, footer, nav {
+  background-color: var(--bg-accent-color);
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: block;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid var(--accent-color);
+  transition: 300ms ease;
+}
+
+nav li a:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+footer {
+  color: white;
+}
+
+main {
+  background-color: var(--main-bg-color);
+  margin: 5px;
+  padding: 5px;
+}
