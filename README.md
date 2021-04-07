@@ -6,4 +6,5 @@
 [Lab 3](lab_3/)  
 [Lab 4](lab_4/)  
 [Midterm](midterm/)  
-[Lab 5](lab_5/)
+[Lab 5](lab_5/)  
+[Lab 6](lab_6/)  
