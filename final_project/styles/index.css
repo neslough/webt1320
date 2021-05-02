@@ -1,4 +1,3 @@
-@import url(./main.css);
 .image-triplet {
   display: grid;
   grid-template-columns: repeat(2, 50%);

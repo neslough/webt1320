@@ -24,6 +24,9 @@ html, body {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://images.squarespace-cdn.com/content/v1/52bf4762e4b0171d9d785d34/1388445475072-YJMGB1GPJ54K55YA15KY/ke17ZwdGBToddI8pDm48kOMlu85B5MDxqKGhDpP8UylZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIOPcEfLDpP8-YL6agnnm4fQmquphBXQ5YE_u1-CrR6DMKMshLAGzx4R3EDFOm1kBS/BlackLotus.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* desktop nav */
