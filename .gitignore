@@ -1,3 +1,5 @@
 /index.html
-/*.sh
+*.sh
 /midterm/data/ignore-*
+/final_project/scripts/*.ls
+/final_project/styles/*.scss

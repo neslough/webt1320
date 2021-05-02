@@ -1,0 +1,86 @@
+@import url("main.css");
+#formats {
+  border: none;
+}
+#formats li div {
+  padding: 1rem 8rem;
+}
+#formats li.active {
+  background-color: var(--accent-color);
+}
+
+section, aside {
+  min-height: 70vh;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70%;
+}
+.image-list a {
+  display: flex;
+  height: 100%;
+  aspect-ratio: 0.7031408308;
+}
+.image-list img {
+  color: white;
+  max-height: 100%;
+}
+
+.no-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .no-desktop {
+    display: block;
+  }
+
+  section {
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0.5rem;
+  }
+
+  .image-list a {
+    height: 80%;
+  }
+
+  .jhoira a {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .image-list {
+    flex-direction: column;
+    height: 90%;
+  }
+  .image-list a {
+    height: 50%;
+  }
+  .image-list.jhoira a {
+    height: 33.3%;
+  }
+}

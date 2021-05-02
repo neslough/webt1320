@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>MoJhoSto: A Casual Magic: the Gathering Format | App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon.png" rel="icon" />
+    <link href="styles/app.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul id="menu">
+        <li><a href=".">Home</a></li>
+        <li><a href="./momir.html">Momir Vig</a></li>
+        <li><a href="./giant.html">Stonehewer Giant</a></li>
+        <li><a href="./jhoira.html">Jhoira</a></li>
+        <li class="active"><a href="javascript:void(0);">App</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside class="desktop-only">
+        <ul id="formats">
+          <li class="ui-widget-header"><div>Cardlist</div></li>
+          <li class="active"><div>Standard</div></li>
+          <li><div>Pioneer</div></li>
+          <li><div>Modern</div></li>
+          <li><div>Legacy</div></li>
+          <li><div>Vintage</div></li>
+          <li><div>Pauper</div></li>
+        </ul>
+      </aside>
+      <section>
+        <div class="no-desktop">
+          <label for="mobile-formats">Cardlist</label>
+          <select name="radius" id="mobile-formats">
+            <option value="standard">Standard</option>
+            <option value="pioneer">Pioneer</option>
+            <option value="modern">Modern</option>
+            <option value="legacy">Legacy</option>
+            <option value="vintage">Vintage</option>
+          </select>
+        </div>
+        <div id="methods">
+          <h3>Momir & Stonehewer Giant</h3>
+          <div>
+            <div class="settings-row">
+              <label for="cmc">Mana value:</label>
+              <input id="cmc" name="value" value="2" />
+              <button id="momir-go">Go!</button>
+            </div>
+            <div class="image-list">
+              <a href="" id="creature-a">
+                <img src="" alt="" id="creature-img" />
+              </a>
+              <a href="" id="equipment-a">
+                <img src="" alt="" id="equipment-img" />
+              </a>
+            </div>
+          </div>
+          <h3>Jhoira</h3>
+          <div>
+            <!-- <fieldset><legend>Settings: </legend> -->
+            <label for="instants"><span id="instants-text">Sorceries</span>
+              <input type="checkbox" name="checkbox-nested-1" id="instants" />
+            </label>
+            <!-- </fieldset> -->
+            <button id="jhoira-go">Go!</button>
+            <div class="image-list jhoira">
+              <a href="" id="spell-one-a">
+                <img src="" alt="" id="spell-one-img" />
+              </a>
+              <a href="" id="spell-two-a">
+                <img src="" alt="" id="spell-two-img" />
+              </a>
+              <a href="" id="spell-three-a">
+                <img src="" alt="" id="spell-three-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- while it isn't displayed, I do, in fact, use this audio element -->
+    <audio id="sfx">
+      <source src='assets/sfx.ogg' />
+    </audio>
+  </body>
+</html>

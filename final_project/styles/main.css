@@ -1,0 +1,158 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("jquery-ui.min.css");
+@import url("jquery-ui.structure.min.css");
+@import url("jquery-ui.theme.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --nav-text-color: white;
+  --nav-border-thickness: 3px;
+  --nav-bg-color: black;
+  --accent-color: hotpink;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* desktop nav */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: var(--nav-bg-color);
+}
+
+nav ul {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav li {
+  list-style-type: none;
+  display: block;
+  padding: 1rem 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: var(--nav-text-color);
+}
+nav li a {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav li.active {
+  border-bottom: var(--nav-border-thickness) solid var(--accent-color);
+}
+nav li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  background-color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+nav li:is(:hover, :active)::before {
+  transform: translate(0, 0);
+}
+
+/* main styling */
+main {
+  min-height: calc(100% - 4rem);
+  display: flex;
+  /* couldn't get grid to work */
+  justify-content: space-evenly;
+  gap: 4rem;
+  padding: 1rem 4rem;
+}
+main article, main section {
+  width: 65%;
+}
+main aside {
+  width: 25%;
+}
+
+@media screen and (max-width: 960px) {
+  /* both tablet and phone views use single-column layout */
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  main aside, main article, main section {
+    width: 100%;
+  }
+  main p {
+    font-size: 1.4rem;
+  }
+}
+/* other stuff */
+img {
+  display: block;
+  border-radius: 2.5vmin;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  opacity: 0.6;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+/* slicknav styles */
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  /* only phone view use slick nav */
+  nav {
+    display: none;
+  }
+
+  .slicknav_menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 960px) {
+  img {
+    border-radius: 0.75rem;
+  }
+}
